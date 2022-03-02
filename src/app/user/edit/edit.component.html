@@ -1,0 +1,45 @@
+<div class="container">
+
+  <form [formGroup]="formEdit" (ngSubmit)="saveUser()">
+
+    <div class="form-group">
+      <label for="pwd">user:</label>
+      <input type="text" class="form-control" formControlName="userName" placeholder="Enter name" id="pwd">
+    </div>
+    <div class="form-group">
+      <label for="pwd1">pass:</label>
+      <input type="password" class="form-control" formControlName="passWord" placeholder="Enter passWord" id="pwd1">
+    </div>
+    <div class="form-group">
+      <label for="pwd2">phone:</label>
+      <input type="text" class="form-control" formControlName="phone" placeholder="Enter phone" id="pwd2">
+    </div>
+    <div class="form-group">
+      <label for="email">email:</label>
+      <input type="email" class="form-control" formControlName="email" placeholder="Enter email" id="email">
+    </div>
+    <div class="form-group">
+      <label for="address">address:</label>
+      <input type="text" class="form-control" formControlName="address" placeholder="Enter email" id="address">
+    </div>
+    <div class="form-group">
+      <p>role :</p>
+      <select name="status" formControlName="role" >
+        <option value="1">User</option>
+        <option value="0">admin</option>
+      </select>
+    </div>
+    <div class="form-group">
+      <label for="img">img:</label>
+      <img src="{{fb}}" >
+      <input type="file" class="form-control" (change)="onFileSelected($event)"  id="img">
+    </div>
+c
+      <button type="submit" [disabled]="!checkUploadFile" class="btn btn-primary">Submit</button>
+
+
+
+    <button type="submit" routerLink="/tuor" class="btn btn-primary">clouse</button>
+  </form>
+</div>
+
